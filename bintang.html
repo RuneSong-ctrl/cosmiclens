@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CosmicLens - Galaxy</title>
+        <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+    
+
+          body {
+              font-family: 'Arial', sans-serif;
+              background-color: #121212;
+              color: #ffffff;
+              text-align: center;
+              padding: 20px;
+              line-height: 1.6;
+          }
+
+          @keyframes fadeIn {
+              0% {
+                  opacity: 0;
+                  transform: translateY(20px);
+              }
+              100% {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+    
+          @keyframes glow {
+              0%, 100% {
+                  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+              }
+              50% {
+                  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+              }
+          }
+
+          header {
+              margin-bottom: 50px;
+              animation: fadeIn 1s ease-in-out;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+    
+          header h1 {
+              font-size: 48px;
+              color: #e0dfff;
+              text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+              animation: glow 2s infinite;
+              margin-bottom: 20px;
+          }
+    
+          .bintang-img {
+              width: 200px;
+              margin: 0 auto;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          }
+          .fun-fact {
+              background-color: #1a1a40;
+              padding: 50px 20px;
+              border-radius: 15px;
+              margin: 20px auto;
+              max-width: 100%;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+              animation: fadeIn 1s ease-in-out;
+          }
+    
+          .fun-fact h2 {
+              font-size: 2rem;
+              color: #d1c4f9;
+              margin-bottom: 30px;
+              animation: glow 2s infinite alternate;
+          }
+          
+          .fun-fact ul {
+              list-style: none;
+              padding: 0;
+              margin: 0 auto;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: space-evenly;
+          }
+    
+          .fun-fact li {
+              flex: 0 1 calc(33.33% - 20px);
+              background-color: rgba(255, 255, 255, 0.1);
+              padding: 20px;
+              border-radius: 12px;
+              text-align: center;
+              color: #e0e0e0;
+              font-size: 1.2rem;
+              font-weight: 500;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+              transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+    
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1> Bintang</h1>
+        <img src="starr.jpg" alt="bintang" class="bintang-img">
+        <h3> Bintang: Lampu Langit Penuh Drama 🔥✨</h3>
+        <p> Bintang itu nggak cuma titik terang di langit, mereka kayak influencer semesta—berkilau, penuh drama, <br>
+            dan punya cerita luar biasa. Dari Matahari yang nyetrong panas sampai bintang supernova yang meledak spektakuler, <br> 
+            setiap bintang punya vibe sendiri. Yuk, kenalan sama mereka, si superstar semesta</p>
+        </header>
+        <section class="fun-fact">
+            <h2> Quick Facts: "Bintang: Lebih dari Sekadar Bling-Bling di Langit"</h2>
+            <ul>  
+                <li> Matahari itu juga bintang, lho! Tapi ukurannya standar aja, kayak middle-class di antara bintang raksasa.</li>
+                <li> Warna bintang itu clue suhu mereka: biru paling panas, merah paling chill.</li>
+                <li> Bintang nggak hidup selamanya. Kalau mereka pensiun, bisa jadi supernova atau lubang hitam.</li>
+                <li> Si Sirius si bintang paling terang: dia kayak spotlight langit malam kita.
+                </li>
+            </ul>
+        </section>
+        <section class="quotes">
+          <h2> Pengen jadi bintang? Lihat aja, mereka nggak butuh perhatian buat tetap bersinar!</h2>
+          </section>
+    </body>
+    
+</html>

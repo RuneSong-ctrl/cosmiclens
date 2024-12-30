@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CosmicLens - Galaxy</title>
+        <style>
+            body {
+            
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: black;
+                color: #ffffff;
+                text-align: center;
+            }
+
+
+
+            h1 {
+                font-size: 3rem;
+                margin: 20px 0;
+                color: #ffffff;
+                text-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                color: #f0f0f0;
+            }
+
+
+            .categories {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+
+            .category-btn {
+                background-color: #4b79a1;
+                border: none;
+                padding: 15px 30px;
+                border-radius: 8px;
+                color: #ffffff;
+                font-size: 1rem;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s, background-color 0.3s;
+            }
+
+            .category-btn:hover {
+                background-color: #6fa9d3;
+                transform: scale(1.05);
+            }
+
+
+            #quiz-section {
+                margin-top: 20px;
+            }
+
+            #question {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            #options {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .option-btn {
+                background-color: #1c1f4d;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                color: #ffffff;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: transform 0.3s, background-color 0.3s;
+            }
+
+            .option-btn:hover {
+                background-color: #4b79a1;
+                transform: scale(1.05);
+            }
+
+
+            #next {
+                background-color: #4b79a1;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                color: #ffffff;
+                font-size: 1rem;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: transform 0.3s, background-color 0.3s;
+            }
+
+            #next:hover {
+                background-color: #6fa9d3;
+                transform: scale(1.05);
+            }
+
+
+            #result {
+                font-size: 1.5rem;
+                margin-top: 20px;
+                color: #ffd700;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+        </style>
+    </head>
+        <body> 
+            <h1> Tes Pengetahuan Kosmikmu! 🚀</h1>
+            <p> Buktikan kalau kamu lebih tahu dari Neil deGrasse Tyson!"</p>
+            <div class="categories">
+                <button class="category-btn" data-category="planet">Planet</button>
+                <button class="category-btn" data-category="phenomena">Fenomena Kosmik</button>
+                <button class="category-btn" data-category="stars">Bintang</button>
+                <button class="category-btn" data-category="galaxies">Galaksi</button>
+              </div>
+              <div id="quiz-section" class="hidden">
+                <h2 id="question"></h2>
+                <div id="options"></div>
+                <button id="next" class="hidden">Soal Berikutnya</button>
+                <div id="result" class="hidden"></div>
+              </div>
+              <script> 
+                  const questionsByCategory = {
+                planet: [
+                    { question: "Planet apa yang dikenal sebagai 'Planet Merah'?", options: ["Mars", "Venus", "Jupiter", "Saturnus"], correct: 0 },
+                    { question: "Planet terbesar di Tata Surya adalah...", options: ["Bumi", "Saturnus", "Jupiter", "Uranus"], correct: 2 },
+                    { question: "Planet mana yang memiliki cincin paling mencolok?", options: ["Saturnus", "Neptunus", "Uranus", "Venus"], correct: 0 }
+                ],
+                phenomena: [
+                    { question: "Apa nama fenomena di mana bintang meledak dengan sangat terang?", options: ["Nebula", "Supernova", "Pulsar", "Quasar"], correct: 1 },
+                    { question: "Lubang hitam terbentuk dari...", options: ["Ledakan galaksi", "Keruntuhan bintang masif", "Interaksi antar galaksi", "Awan debu kosmik"], correct: 1 }
+                ],
+                stars: [
+                    { question: "Apa nama bintang paling terang di langit malam?", options: ["Sirius", "Polaris", "Betelgeuse", "Alpha Centauri"], correct: 0 },
+                    { question: "Bintang mana yang disebut 'Bintang Utara'?", options: ["Betelgeuse", "Proxima Centauri", "Polaris", "Rigel"], correct: 2 }
+                ],
+                galaxies: [
+                    { question: "Galaksi tempat Bumi berada disebut...", options: ["Andromeda", "Sombrero", "Bima Sakti", "Whirlpool"], correct: 2 },
+                    { question: "Galaksi spiral terbesar yang paling dekat dengan Bima Sakti adalah...", options: ["Andromeda", "Centaurus", "Triangulum", "Cartwheel"], correct: 0 }
+                ]
+                };
+
+                let selectedCategory = '';
+                let currentQuestionIndex = 0;
+                let score = 0;
+
+                const quizSection = document.getElementById('quiz-section');
+                const questionEl = document.getElementById('question');
+                const optionsEl = document.getElementById('options');
+                const nextButton = document.getElementById('next');
+                const resultEl = document.getElementById('result');
+
+                document.querySelectorAll('.category-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    selectedCategory = button.getAttribute('data-category');
+                    startQuiz();
+                });
+                });
+
+                function startQuiz() {
+                currentQuestionIndex = 0;
+                score = 0;
+                quizSection.classList.remove('hidden');
+                loadQuestion();
+                }
+
+                function loadQuestion() {
+                const questions = questionsByCategory[selectedCategory];
+                const currentQuestion = questions[currentQuestionIndex];
+                questionEl.textContent = currentQuestion.question;
+                optionsEl.innerHTML = '';
+
+                currentQuestion.options.forEach((option, index) => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.classList.add('option-btn');
+                    button.addEventListener('click', () => handleAnswer(index));
+                    optionsEl.appendChild(button);
+                });
+                }
+
+                function handleAnswer(selectedIndex) {
+                const questions = questionsByCategory[selectedCategory];
+                const currentQuestion = questions[currentQuestionIndex];
+                const buttons = document.querySelectorAll('.option-btn');
+
+                if (selectedIndex === currentQuestion.correct) {
+                    buttons[selectedIndex].style.backgroundColor = 'green';
+                    score++;
+                } else {
+                    buttons[selectedIndex].style.backgroundColor = 'red';
+                    buttons[currentQuestion.correct].style.backgroundColor = 'green';
+                }
+
+                buttons.forEach(btn => btn.disabled = true);
+                nextButton.classList.remove('hidden');
+                }
+
+                nextButton.addEventListener('click', () => {
+                const questions = questionsByCategory[selectedCategory];
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                    nextButton.classList.add('hidden');
+                } else {
+                    showResult();
+                }
+                });
+
+                function showResult() {
+                questionEl.textContent = `Kuis selesai! Skor kamu: ${score}/${questionsByCategory[selectedCategory].length}`;
+                optionsEl.innerHTML = '';
+                nextButton.style.display = 'none';
+    }
+              </script>
+            </div>
+
+        </body>
+ 
+</html>

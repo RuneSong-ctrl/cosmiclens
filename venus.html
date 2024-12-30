@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmicLens - Explore the Universe</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+      }
+
+      header {
+        margin-bottom: 50px;
+        animation: fadeIn 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 48px;
+        color: #e0dfff;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+        animation: glow 2s infinite;
+        margin-bottom: 20px;
+      }
+
+      .planet-img {
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .intro-text {
+        font-size: 18px;
+        color: #b5b5b5;
+        margin-top: 20px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .fun-fact {
+        background-color: #1a1a40;
+        padding: 50px 20px;
+        border-radius: 15px;
+        margin: 20px auto;
+        max-width: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .fun-fact h3 {
+        font-size: 2rem;
+        color: #d1c4f9;
+        margin-bottom: 30px;
+        animation: glow 2s infinite alternate;
+      }
+
+      .fun-img {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      }
+
+      .fun-fact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+
+      .fun-fact li {
+        flex: 0 1 calc(33.33% - 20px);
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        color: #e0e0e0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .fun-fact li:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+
+      .quiz {
+        background-color: #292970;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        display: grid;
+        gap: 20px;
+      }
+
+      .quiz-options button {
+        padding: 10px 20px;
+        background-color: #1a1a40;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .quiz-options button:hover {
+        background-color: #3e3e70;
+        transform: scale(1.1);
+      }
+
+      .quiz-result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Venus</h1>
+      <img src="venus.png" alt="venus" class="planet-img" />
+      <p class="intro-text">
+        Venus adalah tetangga terdekat Bumi yang sering disebut sebagai 'Saudari
+        Kembar Bumi' karena ukurannya mirip.<br />
+        Tapi jangan tertipu! Planet ini jauh dari ramah. Venus adalah planet
+        terpanas di tata surya dengan atmosfer <br />
+        super tebal yang penuh karbon dioksida, membuatnya seperti neraka
+        berlapis awan. Tapi, <br />
+        Venus tetap menawan dengan cahayanya yang terang di langit malam.
+      </p>
+    </header>
+
+    <section class="fun-fact">
+      <h3>Data Singkat yang Keren</h3>
+      <img src="v2.png" alt="venus" class="fun-img" />
+      <ul>
+        <li>Diameter: 12.104 km (hampir sama dengan Bumi).</li>
+        <li>Jarak dari Matahari: 108 juta km.</li>
+        <li>Durasi Hari: 243 hari Bumi (lebih lama dari tahunnya!).</li>
+        <li>Durasi Tahun: 225 hari Bumi.</li>
+        <li>Suhu Permukaan: 465°C (panas terus, nggak ada ampun).</li>
+        <li>Gravitasi: 90% dari gravitasi Bumi (nyaris serasa di rumah).</li>
+      </ul>
+    </section>
+
+    <section class="wow">
+      <h2>Rahasia Keren Venus....</h2>
+      <img src="home2.png" alt="venus  Astronaut" class="wow-img" />
+      <p>
+        Venus adalah planet paling terang di langit malam, jadi sering disebut
+        sebagai 'Bintang Kejora<br />
+        Rotasi Venus terbalik! Matahari terbit di barat dan tenggelam di
+        timur.<br />
+        Hari di Venus lebih lama daripada satu tahunnya, jadi kalau kamu tinggal
+        di sana, sehari rasanya kayak setahun.<br />
+        Awan Venus penuh asam sulfat jadi jangan pernah coba jalan-jalan di
+        sana!<br />
+      </p>
+    </section>
+
+    <section class="quiz">
+      <h2>Seberapa Kenal Kamu dengan Venus?</h2>
+      <form id="quiz-form"></form>
+      <p>Bagaimana perbandingan durasi hari dan tahun di Venus?</p>
+      <div class="quiz-options">
+        <button onclick="checkAnswerButton('2')">
+          a. Satu hari di Venus lebih pendek dari satu tahun
+        </button>
+        <button onclick="checkAnswerButton('4')">
+          b. Satu hari di Venus lebih lama dari satu tahun
+        </button>
+        <button onclick="checkAnswerButton('3')">
+          c. Durasi hari dan tahun di Venus sama
+        </button>
+      </div>
+      <div id="result" class="quiz-result"></div>
+    </section>
+    <script>
+      function checkAnswerButton(answer) {
+        const resultElement = document.getElementById("result");
+
+        if (answer === "4") {
+          resultElement.textContent = "Kamu Jagoan Astronomi! 🎉";
+          resultElement.style.color = "green";
+        } else {
+          resultElement.textContent = "Salah. Coba lagi!";
+          resultElement.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

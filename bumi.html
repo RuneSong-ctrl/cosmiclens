@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicLens - Galaxy</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+
+        header {
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #e0dfff;
+            text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+            animation: glow 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        .planet-img {
+            width: 200px;
+            margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .intro-text {
+            font-size: 18px;
+            color: #b5b5b5;
+            margin-top: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .fun-fact {
+            background-color: #1a1a40;
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .fun-fact h3 {
+            font-size: 2rem;
+            color: #d1c4f9;
+            margin-bottom: 30px;
+            animation: glow 2s infinite alternate;
+        }
+
+        .fun-img {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .fun-fact ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+
+        .fun-fact li {
+            flex: 0 1 calc(33.33% - 20px);
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .fun-fact li:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .quiz {
+            background-color: #292970;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            display: grid;
+            gap: 20px;
+        }
+
+        .quiz-options button {
+            padding: 10px 20px;
+            background-color: #1a1a40;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .quiz-options button:hover {
+            background-color: #3e3e70;
+            transform: scale(1.1);
+        }
+
+        .quiz-result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+        <h1> Bumi</h1>
+        <img src="bumi.png" alt="bumi" class="planet-img">
+     
+        <p class="intro-text"><strong> Look how stunning we are from space!</strong><br>Selamat datang di rumah kita, geng! 🌍 Bumi itu planet ketiga dari Matahari dan satu-satunya <br>
+            tempat yang mendukung kehidupan. Nggak heran sih, Bumi itu seperti paket komplit: ada air, udara, gunung, laut, <br>
+            dan kita semua yang bikin hidup makin berwarna. Keren banget kan? Jangan lupa jaga rumah kita yang satu ini ya!
+            <section class="fun-fact">
+            <h3>Fakta Cepat : Bumi, Rumah Kita Semua</h3>
+            <img src="earth.png" alt="earth" class="fun-img">
+        <ul>
+        </header>
+        <section class="fun-fact">
+            <li>Ukuran? 12.742 km diameternya (nggak kecil, nggak gede—pas!).
+                <li>Jarak dari Matahari? 149,6 juta km (nyaman banget buat hidup).</li>
+                <li> Durasi Hari? 24 jam, tapi kadang ngerasa 24 jam kurang, ya?</li>
+                <li>Durasi Tahun? 365 hari (plus sedikit ekstra buat tahun kabisat).</li>
+                <li>
+                    Isi Permukaan? 71% air, 29% daratan (makanya kita sering disebut 'Planet Biru').
+                </li>
+                <li>Gravitasi? Standar kehidupan, bikin loncat nggak sampai ke luar angkasa. </li>
+            </li>
+        </ul>
+        </section>
+            <section class="wow">
+        <h2>Rahasia Keren Bumi</h2>
+        <img src="astro2.png" alt="bumi  Astronaut" class="wow-img">
+        <p>
+            Bumi itu planet paling hits di tata surya satu-satunya yang punya kehidupan. 🌱<br>
+            Atmosfer Bumi? Kaya oksigen dan bikin kita bisa bernapas. Udah kayak WiFi gratis, penting banget!<br>
+            Medan magnet Bumi itu kayak 'tameng superhero,' melindungi kita dari radiasi Matahari.
+            Ada Bulan yang bikin pasang surut laut, dan tentunya bikin malam lebih estetik
+        </p>
+            </section>
+            <section class="quiz">
+
+        <h2>Seberapa Kenal Kamu dengan Bumi?</h2>
+            <form id="quiz-form"></form>
+            <p>Berapa persen air di permukaan Bumi?</p>
+            <div  class="quiz-options">
+                <button onclick="checkAnswerButton('2')">a. 50%</button>
+                <button onclick="checkAnswerButton('4')">b. 71%</button>
+                <button onclick="checkAnswerButton('3')">c.  90%</button>
+            </div>
+            <div id="result" class="quiz-result"></div>
+            </section>
+            <script>
+                function checkAnswerButton(answer) {
+                    const resultElement = document.getElementById("result");
+            
+                    if (answer === "4") {
+                        resultElement.textContent = "Betul! Makanya kita sering disebut Planet Biru, guys! 🎉";
+                        resultElement.style.color = "green";
+                    } else {
+                        resultElement.textContent = "Salah. Coba lagi!";
+                        resultElement.style.color = "red";
+                    }
+                }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CosmicLens - Galaxy</title>
+    <style>
+        @media (max-width: 768px) {
+            .box-temukan {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            nav.tombol-home a {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: rgb(3, 5, 43);
+            text-align:center;
+            line-height: 5;
+            color: azure;
+            font-size: 18px;
+            position: relative; 
+            z-index: 10; 
+        }
+
+        a{
+            text-decoration: none;
+            color:aliceblue;
+        }
+
+        .tombol-home a {
+            color: white; 
+            padding: 14px 20px; 
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        .tombol-home a {
+            color: white; 
+            padding: 14px 20px; 
+            transition: background-color 0.3s, color 0.3s; /
+        }
+
+
+        .tombol-home a:hover {
+            color: #0a0431; 
+        }
+            
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+     
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            padding: auto;
+            text-align: center;
+        }
+
+   
+        section h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #d1c4f9;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.4;
+            letter-spacing: 1px;
+        }
+
+  
+        .box-planet {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+
+        .box {
+            background: linear-gradient(145deg, #1a1a40, #2a2a55);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        
+        .box:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+     
+        .box img {
+            width: 60%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        
+        .box h3 {
+            font-size: 22px;
+            color: #e0dfff;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s ease;
+        }
+
+        .box:hover h3 {
+            color: #ffffff;
+        }
+
+      
+        .box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #b5b5b5;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .box:hover p {
+            color: #eaeaea;
+        }
+
+        .detail-button {
+            padding: 12px 30px;
+            background-color: #292970;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .detail-button:hover {
+            background-color: #554e83;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            section h1 {
+                font-size: 28px;
+            }
+
+            .box-planet {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .box {
+                padding: 20px;
+            }
+
+            .box img {
+                max-width: 120px;
+            }
+
+            .detail-button {
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+        }
+
+    </style>
+        </head>
+            <body>
+                <header>
+                    <nav class="tombol-home">
+                        <a href="index.html">Home</a>
+                        <a href="index.html">About</a>
+                        <a href="galaxy.html">Galaxy</a>
+                        <a href="kuis.html">Quiz</a>
+                    </nav>
+                </header>
+            <section>
+                <h1>
+                    Siap menjelajahi tata surya? 
+                    <br>Pilih planet favoritmu dan lihat apa yang membuatnya begitu istimewa!
+                </h1>
+                <div class="box-planet">
+                    <div class="box">
+                        <img src="merk.png" alt="merkurius" class="merkurius">
+                        <h3> Merkurius</h3>
+                        <p>Si kecil yang berani! Planet terdekat dengan <br>Matahari ini selalu berjuang<br> melawan suhu ekstrem.</p>
+                    <a href="merkurius.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+        
+                    <div class="box">
+                        <img src="ven.png" alt="venus" class="venus">
+                        <h3>Venus</h3>
+                        <p>
+                            Sang bintang malam yang mempesona.<br>
+                            Tapi hati-hati, dia menyimpan panas yang luar biasa
+                        </p>
+                        <a href="venus.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+                    <div class="box">
+                        <img src="bumi1.png" alt="bumi" class="bumi">
+                        <h3>Bumi</h3>
+                        <p>
+                            Rumah kita tercinta! Tempat semua keajaiban kehidupan bermula.
+                        </p>
+                        <a href="bumi.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+                    <div class="box">
+                        <img src="mar.png" alt="mars" class="mars">
+                        <h3>Mars</h3>
+                        <p>
+                            Si petualang merah! Planet yang penuh <br>
+                            misteri dan mungkin calon rumah masa depan manusia.<br>
+                        <a href="mars.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+                    <div class="box">
+                        <h3>Jupiter</h3>
+                        <img src="jup.png" alt="jupiter" class="jupiter">
+                        <p>
+                            Raja Tata Surya! Planet terbesar<br>
+                            ini dihiasi badai abadi yang legendaris.<br>
+                        <a href="jupiter.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+                    <div class="box">
+                        <img src="sat.png" alt="sat" class="saturn">
+                        <h3>Saturnus</h3>
+                        <p>
+                            Si anggun bercincin. Planet ini terkenal dengan <br>
+                            cincin indah yang tak tertandingi.<br>
+                        <a href="saturnus.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+                    <div class="box">
+                        <img src="ura.png" alt="uranus" class="uranus">
+                        <h3>Uranus</h3>
+                        <p>
+                            Si pendiam misterius. Planet ini berputar miring,<br>
+                            seperti memiliki gaya sendiri.<br>
+                        <a href="uranus.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+                    <div class="box">
+                        <img src="nept.png" alt="nept" class="neptunus">
+                        <h3>Neptunus</h3>
+                        <p>
+                            Sang biru yang tenang. Tapi jangan tertipu, <br>
+                            angin di sini bisa lebih cepat dari pesawat jet!<br>
+                        <a href="neptunus.html" class="detail-button">Ayo Lihat</a>
+                    </div>
+                    <div class="box">
+                        <img src="plut.png" alt="pluto" class="pluto">
+                        <h3>Pluto</h3>
+                        <p>
+                            Si kecil yang gigih! Meski bukan lagi planet utama, 
+                            <br>ia tetap menarik dengan keunikannya.<br>
+                        <a href="pluto.html" class="detail-button">Ayo Lihat</a>
+                    </div>  
+            </section>
+            </body>
+</html>

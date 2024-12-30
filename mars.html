@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmicLens - Galaxy</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+      }
+
+      header {
+        margin-bottom: 50px;
+        animation: fadeIn 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 48px;
+        color: #e0dfff;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+        animation: glow 2s infinite;
+        margin-bottom: 20px;
+      }
+
+      .planet-img {
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .intro-text {
+        font-size: 18px;
+        color: #b5b5b5;
+        margin-top: 20px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .fun-fact {
+        background-color: #1a1a40;
+        padding: 50px 20px;
+        border-radius: 15px;
+        margin: 20px auto;
+        max-width: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .fun-fact h2 {
+        font-size: 2rem;
+        color: #d1c4f9;
+        margin-bottom: 30px;
+        animation: glow 2s infinite alternate;
+      }
+
+      .fun-img {
+        width: 30%;
+        height: 4%;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      }
+
+      .fun-fact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+
+      .fun-fact li {
+        flex: 0 1 calc(33.33% - 20px);
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        color: #e0e0e0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .fun-fact li:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      input[type="number"] {
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #3b3d5c;
+        border-radius: 5px;
+        background-color: #1e1e2f;
+        color: #ffffff;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #ff9f1c;
+        color: #1e1e2f;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #ff6f00;
+      }
+
+      .result {
+        margin-top: 15px;
+        font-size: 1.2em;
+        color: #c3c3e6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mars</h1>
+      <img src="Mars.png" alt="mars" class="planet-img" />
+      <p class="intro-text">
+        <strong>
+          Welcome to the Red Planet, where everything is dusty but
+          exciting!</strong
+        ><br />
+        Mars, planet merah yang sering jadi bintang utama kalau ngomongin hidup
+        di luar Bumi. 🚀<br />
+        Punya vibes gurun merah dengan lembah, gunung berapi, dan badai debu
+        yang gede banget.<br />
+        Meskipun dingin dan gersang, Mars itu planet yang bikin kita penasaran
+        terus, apalagi kalau lagi ngomongin <br />
+        koloni manusia di masa depan. Siap nggak buat jadi tetangga alien?
+      </p>
+    </header>
+
+    <section class="fun-fact">
+      <h2>Fakta Cepat: Mars, Si Planet Merah</h2>
+      <img src="mars1.png" alt="mars" class="fun-img" />
+      <ul>
+        <li>Diameter: 6.779 km (setengahnya Bumi, mini banget!)</li>
+        <li>Jarak dari Matahari: 227,9 juta km (cukup jauh buat dingin).</li>
+        <li>
+          Durasi Hari: 24,6 jam (mirip Bumi, jadi nggak jetlag kalau pindah ke
+          sini).
+        </li>
+        <li>Durasi Tahun: 687 hari Bumi (2x lebih lama nunggu ultah)</li>
+        <li>Gravitasi: 38% dari Bumi (loncat bakal kayak atlet parkour).</li>
+        <li>Suhu: Rata-rata -63°C (bawa jaket tebal, geng!).</li>
+      </ul>
+    </section>
+
+    <section class="wow">
+      <h2>Rahasia Keren Mars</h2>
+      <img src="astro4.png" alt="mars  Astronaut" class="wow-img" />
+      <p>
+        Mars punya gunung berapi terbesar di tata surya, Olympus Mons. Tingginya
+        3x Everest. Bayangin selfie di puncaknya!<br />
+        Ada lembah super panjang di Mars, namanya Valles Marineris, lebarnya
+        bisa muat Benua Amerika!<br />
+        Es di kutub Mars itu bikin planet ini punya kemungkinan air, dan di masa
+        depan, bisa jadi rumah kedua manusia<br />
+        Mars punya 2 bulan kecil, Phobos dan Deimos. Bentuknya kayak kentang
+        terbang. 🥔
+      </p>
+    </section>
+
+    <section class="content" style="background-color: #1e1e2f">
+      <div class="container">
+        <h2>Simulasi Berat di Mars 🌌</h2>
+        <p>Masukkan berat badanmu di Bumi, dan lihat berat badanmu di Mars!</p>
+        <input
+          type="number"
+          id="weight"
+          placeholder="Berat badan di Bumi (kg)"
+        />
+        <button onclick="calculateMarsWeight()">Cek Berat di Mars</button>
+        <div class="result" id="result"></div>
+      </div>
+    </section>
+  </body>
+  <script>
+    function calculateMarsWeight() {
+      const weightOnEarth = document.getElementById("weight").value;
+      if (weightOnEarth) {
+        const weightOnMars = (weightOnEarth * 0.38).toFixed(2);
+        document.getElementById(
+          "result"
+        ).textContent = `Beratmu di Mars hanya ${weightOnMars} kg! Diet tanpa usaha, bestie! 🚀`;
+      } else {
+        document.getElementById("result").textContent =
+          "Masukkan berat badanmu dulu, dong! 😅";
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CosmicLens - Explore the Universe</title>
+        <style>   
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              }
+    
+          body {
+              font-family: 'Arial', sans-serif;
+              background-color: #121212;
+              color: #ffffff;
+              text-align: center;
+              padding: 20px;
+              line-height: 1.6;
+          }
+    
+
+          @keyframes fadeIn {
+              0% {
+                  opacity: 0;
+                  transform: translateY(20px);
+              }
+              100% {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+    
+          @keyframes glow {
+              0%, 100% {
+                  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+              }
+              50% {
+                  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+              }
+            }
+          header {
+              margin-bottom: 50px;
+              animation: fadeIn 1s ease-in-out;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+    
+          header h1 {
+              font-size: 48px;
+              color: #e0dfff;
+              text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+              animation: glow 2s infinite;
+              margin-bottom: 20px;
+          }
+    
+          .planet-img {
+              width: 200px;
+              margin: 0 auto;
+              border-radius: 50%;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          }
+    
+          .intro-text {
+              font-size: 18px;
+              color: #b5b5b5;
+              margin-top: 20px;
+              animation: fadeIn 1.5s ease-in-out;
+          }
+
+          .fun-fact {
+              background-color: #1a1a40;
+              padding: 50px 20px;
+              border-radius: 15px;
+              margin: 20px auto;
+              max-width: 100%;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+              animation: fadeIn 1s ease-in-out;
+          }
+    
+          .fun-fact h2 {
+              font-size: 2rem;
+              color: #d1c4f9;
+              margin-bottom: 30px;
+              animation: glow 2s infinite alternate;
+          }
+    
+          .fun-img {
+              width: 30%;
+              height: 4%;
+              max-width: 600px;
+              margin: 0 auto 30px;
+              border-radius: 12px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+          }
+    
+          .fun-fact ul {
+              list-style: none;
+              padding: 0;
+              margin: 0 auto;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: space-evenly;
+          }
+    
+          .fun-fact li {
+              flex: 0 1 calc(33.33% - 20px);
+              background-color: rgba(255, 255, 255, 0.1);
+              padding: 20px;
+              border-radius: 12px;
+              text-align: center;
+              color: #e0e0e0;
+              font-size: 1.2rem;
+              font-weight: 500;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+              transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+    
+          .wow li:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+              transform: scale(1.05);
+              cursor: pointer;
+          }
+          .wow ul {
+              list-style: none;
+              padding: 0;
+              margin: 0 auto;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: space-evenly;
+              margin-bottom: 50px;
+          }
+    
+          .wow li {
+              flex: 0 1 calc(33.33% - 20px);
+              background-color: rgba(255, 255, 255, 0.1);
+              padding: 20px;
+              border-radius: 12px;
+              text-align: center;
+              color: #e0e0e0;
+              font-size: 1.2rem;
+              font-weight: 500;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+              transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+    
+          .wow li:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+              transform: scale(1.05);
+              cursor: pointer;
+          }
+          input[type="number"] {
+          width: 50%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #3b3d5c;
+          border-radius: 5px;
+          background-color: #1e1e2f;
+          color: #ffffff;
+          box-sizing: border-box;
+        }
+    button {
+      background-color: #ff9f1c;
+      color: #1e1e2f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #ff6f00;
+    }
+    
+    .result {
+      margin-top: 15px;
+      font-size: 1.2em;
+      color: #c3c3e6;
+    }
+          </style>
+    </head>
+        <body>
+            <header> 
+            <h1> Pluto</h1>
+            <img src="pluto.png" alt="pluto" class="planet-img">
+            <p class="intro-text"><strong> Si kecil penuh cinta dari ujung tata surya</strong><br> Pluto, si underdog tata surya! 🌟 Dulu dianggap planet, sekarang ‘cuma’ planet kerdil. 
+                <br> Tapi jangan salah, meskipun kecil, Pluto punya banyak cerita keren yang bikin kita semua respect. 
+                <br>Si kecil ini adalah bukti kalau ukuran nggak ngaruh buat jadi luar biasa."</p>
+            </header>
+            
+        <section class="fun-fact">
+                <h2> Fakta Cepat: Pluto, Si Legenda Tata Surya</h2>
+                <img src="plutoo.png" alt="mars" class="fun-img">
+                <ul>
+                    <li> Diameter: 2.377 km (lebih kecil dari Bulan kita).</li>
+                    <li> Jarak dari Matahari: 5,9 miliar km (kalau liburan ke sini, siap-siap lama banget!).</li>
+                    <li> Durasi Hari: 6,4 hari Bumi (harinya lebih lama, cocok buat tidur panjang).</li>
+                    <li> Durasi Tahun: 248 tahun Bumi (ulang tahun sekali seumur hidup mungkin nggak cukup).</li>
+                    <li> Gravitasi: 0,063x gravitasi Bumi (lompat di sini bisa kayak superman!).</li>
+                    <li> Suhu: Rata-rata -229°C (Pluto = planet es yang cool abis).</li>
+                </ul>
+            </section>
+            <section class="wow">
+                <h2> Rahasia Keren Pluto</h2>
+                <img src="astro5.png" alt="mars  Astronaut" class="wow-img">
+                <h2><strong>Planet atau Bukan?</strong><br>
+                    <ul>
+                   <li class="intro-text">Pluto dulu dianggap planet, tapi sejak 2006 diklasifikasikan sebagai planet kerdil karena ukurannya kecil dan orbitnya ‘unik’</li> 
+                    <li  class="intro-text"> <strong>Punya Hati! </strong><br>
+                    Permukaan es di Pluto membentuk pola mirip hati yang disebut Tombaugh Regio. Siapa bilang planet kecil nggak punya perasaan?</li>
+                    <li class="intro-text"><strong> Orbitnya Beda Sendiri</strong><br>
+                    Orbit Pluto lebih elips dan miring dibanding planet lain, bikin dia makin ‘anti-mainstream’.</li>
+                <li class="intro-text"> <strong> Punya Bulan Besar</strong> <br>Charon, bulan terbesar Pluto, ukurannya hampir setengah dari Pluto. Jadi mereka sering disebut planet kembar.</li>
+                <li class="intro-text"><strong>Planet Es Misterius</strong> <br>Permukaan Pluto penuh dengan nitrogen beku, es metana, dan es air—kayak freezer raksasa di ujung tata surya.</li>
+            </ul>
+            </section>
+
+            <section class="content" style="background-color:#1e1e2f ">
+                <div class="container">
+                <h2>Simulasi Berat di Pluto</h2>
+                <p>Masukkan berat badanmu di Bumi (kg):</p>
+                <input type="number" id="weight" placeholder="Berat di Bumi" />
+                <button onclick="calculateWeight()">Hitung Berat di Pluto</button>
+                <div class="result" id="result"></div>
+                </div>
+            </section>
+
+                <script>
+                    function calculateWeight() {
+                    const weight = parseFloat(document.getElementById('weight').value);
+                    if (isNaN(weight) || weight <= 0) {
+                        document.getElementById('result').innerText = "Masukkan angka yang valid!";
+                        return;
+                    }
+                    const plutoWeight = weight * 0.063;
+                    document.getElementById('result').innerText = `Beratmu di Pluto: ${plutoWeight.toFixed(2)} kg`;
+                    }
+                </script>
+        </body>
+    
+</html>

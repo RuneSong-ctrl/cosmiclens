@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CosmicLens - Explore the Universe</title>
+        <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #121212;
+          color: #ffffff;
+          text-align: center;
+          padding: 20px;
+          line-height: 1.6;
+      }
+
+      @keyframes fadeIn {
+          0% {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+          100% {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+      
+      @keyframes glow {
+          0%, 100% {
+              box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+          }
+          50% {
+              box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+          }
+      }
+      
+      .wrapper {
+          max-width: 1200px; 
+          margin: 0 auto; 
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 40px; 
+      }
+
+      header {
+          margin-bottom: 50px;
+          animation: fadeIn 1s ease-in-out;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      
+      header h1 {
+          font-size: 48px;
+          color: #e0dfff;
+          text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+          animation: glow 2s infinite;
+          margin-bottom: 20px;
+      }
+      
+      header .planet-img {
+          width: 200px;
+          margin: 0 auto;
+          border-radius: 50%;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          animation: bounce 2s infinite;
+      }
+      
+      header .intro-text {
+          font-size: 18px;
+          color: #b5b5b5;
+          margin-top: 20px;
+          animation: fadeIn 1.5s ease-in-out;
+      }
+      
+      .fun-fact {
+          background-color: #1a1a40; 
+          padding: 50px 20px; 
+          border-radius: 15px; 
+          margin: 20px auto;
+          max-width: 100%; 
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); 
+          animation: fadeIn 1s ease-in-out; 
+          text-align: center; 
+      }
+      
+      .fun-fact h2 {
+          font-size: 3rem; 
+          color: #d1c4f9;
+          margin-bottom: 30px;
+          text-align: center; 
+          animation: glow 2s infinite alternate; 
+      }
+      
+      .fun-fact .fun-img {
+          width: 100%; 
+          max-width: 600px; 
+          margin: 0 auto 30px; 
+          border-radius: 12px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      }
+
+      .fun-fact ul {
+          list-style: none; 
+          padding: 0; 
+          margin: 0 auto; 
+          display: flex; 
+          flex-wrap: wrap; 
+          gap: 20px;
+          justify-content: space-evenly; 
+      }
+
+      .fun-fact li {
+          flex: 0 1 calc(33.33% - 20px); 
+          background-color: rgba(255, 255, 255, 0.1); 
+          padding: 20px; 
+          border-radius: 12px; 
+          text-align: center;
+          color: #e0e0e0; 
+          font-size: 1.2rem; 
+          font-weight: 500; 
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+          transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+      
+      .fun-fact li:hover {
+          background-color: rgba(255, 255, 255, 0.2); 
+          transform: scale(1.05); 
+          cursor: pointer; 
+      }
+      
+      @media (max-width: 1024px) {
+          .fun-fact li {
+              flex: 0 1 calc(50% - 20px); 
+          }
+      }
+      
+      @media (max-width: 768px) {
+          .fun-fact li {
+              flex: 0 1 100%;
+          }
+          .fun-fact .fun-img {
+              max-width: 100%; 
+          }
+          .fun-fact h2 {
+              font-size: 2rem; 
+          }
+      }
+      
+      
+ 
+      .wow {
+          background-color: #1f1f5a;
+          padding: 30px;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      }
+      
+      .wow h2 {
+          font-size: 28px;
+          color: #d1c4f9;
+          flex: 1;
+      }
+      
+      .wow .wow-img {
+          width: 150px;
+          border-radius: 50%;
+          animation: bounce 2s infinite alternate;
+      }
+      
+      .quotez {
+          background-color: #292970;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+          text-align: center;
+          display: grid;
+          gap: 20px;
+          grid-template-columns: 1fr;
+      }
+      
+      .quotez h2 {
+          font-size: 24px;
+      }
+      </style>
+    </head>
+    <body>
+        <header>
+        <h1> Uranus</h1>
+        <img src="uranus.png" alt="Uranus" class="planet-img">
+        <p> <strong> Planet rebahan dengan vibes cool (literally)!</strong><br>Uranus, planet yang suka ‘anti-mainstream’! 🌌 Dengan warna biru pastel dan gaya rotasi horizontal, <br>
+            Uranus adalah planet yang beda sendiri di tata surya. Si pendiam yang dingin ini ternyata menyimpan banyak misteri, <br>
+            cocok banget buat kamu yang suka hal unik!</p>
+        </header>
+
+        <section class="fun-fact">
+            <h2> Fakta Cepat: Uranus, Sang Trendsetter</h2>
+            <img src="uran.png" alt="Uranus Fun Facts" class="fun-img">
+            <ul>
+                <li> Diameter: 50.724 km (4x lebih besar dari Bumi).</li>
+                <li> Jarak dari Matahari: 2,87 miliar km (yang paling jauh tapi tetap stylish).</li>
+                <li> Durasi Hari: 17 jam (lebih pendek dari sehari di Bumi, tapi tidur aja dingin terus).</li>
+                <li> Durasi Tahun: 84 tahun Bumi (bisa ngerayain ulang tahun cuma sekali dalam hidup 😅).</li>
+                <li> Gravitasi: 0,89x gravitasi Bumi (berasa ringan, serasa liburan!).</li>
+                <li> Suhu: Rata-rata -224°C (planet paling dingin di tata surya!).</li>
+            </ul>
+        </section>
+        <section class="wow">
+            <h2> Rahasia Uranus</h2>
+            <p>
+                Uranus rotasi anti-mainstream!<br> 
+                Rotasi Uranus miring hingga 98°, kayak planet yang lagi rebahan terus.
+            </p>
+            <p> Warnanya estetik banget!<br> Warna biru-hijau khas Uranus berasal dari metana di atmosfernya yang menyerap cahaya merah.</h4>
+            </p> Cincin Uranus itu underrated.<br> 
+                Emang nggak se-wow Saturnus, tapi Uranus punya 13 cincin tipis yang super estetik.</p>
+                <p> Punya lebih dari 27 bulan!
+                    Beberapa dinamai dari karakter Shakespeare, kayak Titania, Oberon, dan Miranda.</p>
+                    </p> Super dingin!
+                        Suhu Uranus lebih dingin dari Neptunus, meskipun Neptunus lebih jauh dari Matahari.</p>
+        </section>
+        <section class="quotez">
+            <h2> Uranus itu beda sendiri, rotasi horizontalnya bikin planet ini selalu tampil unik! </h2>
+            </section>
+    </body>
+</html>

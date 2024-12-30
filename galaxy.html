@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            padding: auto;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgb(3, 5, 43);
+            text-align: center;
+            line-height: 5;
+            color: azure;
+            font-size: 18px;
+            position: relative;
+            z-index: 10;
+        }
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .tombol-home a {
+            color: white;
+            padding: 14px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tombol-home a:hover {
+            color: #0a0431;
+        }
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: rgb(106, 83, 195);
+            font-weight: 700;
+            letter-spacing: 2px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            color: #b5b5b5;
+            animation: fadeInUp 2s ease-out;
+        }
+        #galaxy.html {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            animation: fadeInUp 2.5s ease-out;
+        }
+        .box {
+            background: linear-gradient(145deg, #1a1a40, #232357);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .box:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+        .box h2, .box h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #e0dfff;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s ease;
+        }
+        .box:hover h2, .box:hover h3 {
+            color: #ffffff;
+        }
+        .box img {
+            width: 70%;
+            max-width: 180px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        }
+        .box p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            color: #c1c1c1;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+        .box:hover p {
+            color: #eaeaea;
+        }
+        .box a {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #292970;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box a:hover {
+            background-color: #554e83;
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .box {
+                padding: 20px;
+            }
+            .box h3 {
+                font-size: 22px;
+            }
+            .box p {
+                font-size: 14px;
+            }
+            .box a {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CosmicLens - Galaxy</title>
+    </head>
+    <body>
+        <header>
+            <nav class="tombol-home">
+                <a href="index.html">Home</a>
+                <a href="index.html">About</a>
+                <a href="galaxy.html">Galaxy</a>
+                <a href="kuis.html">Quiz</a>
+            </nav>
+        </header>
+        <h1>CosmicLens</h1>
+        <p>Siap menjelajahi tata surya? Pilih planet favoritmu dan lihat apa yang membuatnya begitu istimewa!</p>
+        <section id="galaxy.html">
+            <div class="box-galaxy">
+                <div class="box">
+                    <h3>Planet Tata Surya</h3>
+                    <img src="saturnbg.png" alt="saturn">
+                    <p>Jelajahi setiap planet, dari Merkurius hingga Neptunus, dengan fakta menarik dan visual yang memukau.</p>
+                    <a href="planet.html">Ayo Jelajahi</a>
+                </div>
+                <div class="box">
+                    <h3>Bintang dan Galaksi</h3>
+                    <img src="galaksibg2.png" alt="galaksi">
+                    <p>Temukan cerita tentang bintang yang jauh, nebula yang memukau, hingga rahasia galaksi kita sendiri, Bima Sakti.</p>
+                    <a href="bintanggalaksi.html">Ayo Jelajahi</a>
+                </div>
+                <div class="box">
+                    <h3>Fenomena Kosmik</h3>
+                    <img src="galaksibg.png" alt="fenomena">
+                    <p>Pelajari fenomena luar angkasa seperti gerhana, komet, dan supernova dengan penjelasan yang mudah dipahami.</p>
+                    <a href="fenomena.html">Ayo Jelajahi</a>
+                </div>
+                <div class="box">
+                    <h3>Kuis dan Eksplorasi</h3>
+                    <img src="kuis.png" alt="kuis">
+                    <p>Uji pengetahuanmu tentang astronomi dan nikmati perjalanan belajar yang menyenangkan.</p>
+                    <a href="kuis.html">Ayo Jelajahi</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

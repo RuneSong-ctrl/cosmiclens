@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmicLens - Galaxy</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+      }
+
+      header {
+        margin-bottom: 50px;
+        animation: fadeIn 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 48px;
+        color: #e0dfff;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+        animation: glow 2s infinite;
+        margin-bottom: 20px;
+      }
+
+      .planet-img {
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .intro-text {
+        font-size: 18px;
+        color: #b5b5b5;
+        margin-top: 20px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .fun-fact {
+        background-color: #1a1a40;
+        padding: 50px 20px;
+        border-radius: 15px;
+        margin: 20px auto;
+        max-width: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .fun-fact h2 {
+        font-size: 2rem;
+        color: #d1c4f9;
+        margin-bottom: 30px;
+        animation: glow 2s infinite alternate;
+      }
+
+      .fun-img {
+        width: 30%;
+        height: 4%;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      }
+
+      .fun-fact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+
+      .fun-fact li {
+        flex: 0 1 calc(33.33% - 20px);
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        color: #e0e0e0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .fun-fact li:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      input[type="number"] {
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #3b3d5c;
+        border-radius: 5px;
+        background-color: #1e1e2f;
+        color: #ffffff;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #ff9f1c;
+        color: #1e1e2f;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #ff6f00;
+      }
+
+      .result {
+        margin-top: 15px;
+        font-size: 1.2em;
+        color: #c3c3e6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Jupiter</h1>
+      <img src="Jupiter.png" alt="Jupiter" class="planet-img" />
+      <p>
+        <strong> raksasa gas dengan gaya dramatis yang tak tertandingi.</strong
+        ><br />Welcome to Jupiter, planet terbesar di tata surya! 🌟 Dengan
+        ukuran raksasa dan pusaran badai legendaris, <br />Jupiter adalah
+        definisi 'boss level' di antara planet lainnya. <br />Atmosfernya penuh
+        dengan gas, tanpa permukaan padat, tapi siapa yang peduli? <br />Jupiter
+        itu drama galaksi dengan cincin samar dan lebih dari 90 bulan yang
+        mengorbitnya!
+      </p>
+    </header>
+    <section class="fun-fact">
+      <h2>Fakta Cepat: Jupiter, Sang Raja Planet</h2>
+      <img src="jup (2).png" alt="Jupiter Fun Facts" class="fun-img" />
+      <ul>
+        <li>Diameter: 139.820 km (11x lebih besar dari Bumi, gila gede!).</li>
+        <li>Jarak dari Matahari: 778,5 juta km (jauh, tapi tetep terang).</li>
+        <li>
+          Durasi Hari: 9,9 jam (super cepat muternya, nggak ngantuk tuh?).
+        </li>
+        <li>
+          Durasi Tahun: 11,86 tahun Bumi (lama banget, ulang tahun jarang).
+        </li>
+        <li>Gravitasi: 2,4x gravitasi Bumi (lompat? Jangan harap bisa!).</li>
+        <li>Suhu: Rata-rata -145°C (beku banget).</li>
+      </ul>
+    </section>
+
+    <section class="wow">
+      <h2>Rahasia Keren Jupiter</h2>
+      <img src="astro5.png" alt="Jupiter Astronaut" class="wow-img" />
+      <p>
+        Ada lebih dari 90 bulan yang mengorbit Jupiter, termasuk Io, yang punya
+        gunung berapi aktif, dan Europa, <br />
+        yang diduga punya lautan di bawah es
+      </p>
+      <p>
+        Jupiter itu planet raksasa dengan badai raksasa juga—Great Red Spot.
+        <br />Ukurannya 3x Bumi dan badai ini udah berlangsung lebih dari 300
+        tahun. Drama banget, kan?
+      </p>
+      <p>
+        Jupiter itu pelindung galaksi! Gravitasi supernya sering menahan
+        asteroid atau komet yang mau menyerang planet lain, termasuk Bumi.
+      </p>
+      <p>
+        Cincinnya mungkin nggak se-wow Saturnus, tapi Jupiter juga punya cincin
+        tipis dari debu. Subtle tapi tetap elegan
+      </p>
+    </section>
+    <section class="content" style="background-color: #1e1e2f">
+      <div class="container">
+        <h1>Simulasi Berat di Jupiter 🌌</h1>
+        <p>Masukkan berat badanmu di Bumi untuk lihat beratmu di Jupiter!</p>
+        <input
+          type="number"
+          id="weight"
+          placeholder="Berat badan di Bumi (kg)"
+        />
+        <button onclick="calculateJupiterWeight()">Cek Berat di Jupiter</button>
+        <div class="result" id="result"></div>
+      </div>
+    </section>
+
+    <script>
+      function calculateJupiterWeight() {
+        const weightOnEarth = document.getElementById("weight").value;
+        if (weightOnEarth) {
+          const weightOnJupiter = (weightOnEarth * 2.4).toFixed(2);
+          document.getElementById(
+            "result"
+          ).textContent = `Beratmu di Jupiter: ${weightOnJupiter} kg! Siap jadi berat maksimal! 💪`;
+        } else {
+          document.getElementById("result").textContent =
+            "Masukkan berat badanmu dulu, dong! 🚀";
+        }
+      }
+    </script>
+  </body>
+</html>

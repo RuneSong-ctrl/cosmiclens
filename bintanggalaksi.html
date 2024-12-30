@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicLens - Galaxy</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #000428, #0b0c0d);
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+            
+        }
+
+
+        h1 {
+            font-size: 4rem;
+            margin: 20px 0;
+            color: #ffffff;
+            text-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
+            animation: glow 2s infinite alternate;
+            letter-spacing: 2px;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                text-shadow: 0 8px 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+
+        section {
+
+            margin: 30px auto;
+            padding: 30px;
+            max-width: 800px;
+            background-color: rgba(28, 20, 66, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+
+        section h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+
+        .box-bintang-galaksi {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #1e3a8a, #111);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+ 
+        .box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+        }
+
+
+        .box img {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover img {
+            transform: rotate(15deg);
+        }
+
+        .box a {
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Bintang dan Galaksi ✨</h1>
+    <section>
+        <h1>Siap menjelajahi tata surya?</h1>
+        <div class="box-bintang-galaksi">
+            <div class="box">
+                <a href="bintang.html">
+                    <img src="starrr.png" alt="Ikon Bintang">
+                </a>
+            </div>
+            <div class="box">
+                <a href="galaksi.html">
+                    <img src="gallakksi.png" alt="Ikon Galaksi">
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
